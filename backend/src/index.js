@@ -1,16 +1,18 @@
 import express from "express";
 import dotenv from "dotenv";
 import authRoutes from "./routes/auth.route.js";
-import { connectDB } from "./lib/db.js";
+import messageRoutes from "./routes/message.route.js";
+import {connectDB} from "./lib/db.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+
 const app = express();
 app.use(
-    cors({
-        origin: "http://localhost:5000",
-        credentials: true,
-    }),
+      cors({
+          origin: "http://localhost:5000",
+          credentials: true,
+      }),
 );
 app.use(express.json());
 dotenv.config();
@@ -18,7 +20,10 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
+app.use('/api/message', messageRoutes)
 
 app.listen(PORT, () => {
     connectDB();
 });
+
+
