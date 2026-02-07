@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router";
+import { createBrowserRouter } from "react-router";
 import RootLayout from "../Components/Layout/RootLayout";
 import Home from "../Pages/Home";
 import SignUp from "../Pages/SignUp";
@@ -12,22 +12,24 @@ export const router = createBrowserRouter([
         path: "/",
         element: RootLayout,
         children: [
-            {index: true, element: <Home/>},
-            {path: "/signup", element: <SignUp/>},
-            {path: "/login", element: <Login/>},
+            { index: true, element: <Home /> },
+            { path: "/signup", element: <SignUp /> },
+            { path: "/login", element: <Login /> },
             {
-                path: "/setting", element: (
+                path: "/setting",
+                element: (
                     <PrivateRoute>
-                        <Setting/>
+                        <Setting />
                     </PrivateRoute>
-                )
+                ),
             },
             {
-                path: "/profile", element: (
+                path: "/profile",
+                element: (
                     <PrivateRoute>
-                        <Profile/>
+                        <Profile />
                     </PrivateRoute>
-                )
+                ),
             },
         ],
     },
