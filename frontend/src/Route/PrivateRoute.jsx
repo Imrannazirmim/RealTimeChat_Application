@@ -6,6 +6,7 @@ import {Loader} from "lucide-react";
 const PrivateRoute = ({ children }) => {
     const location = useLocation();
     const { authUser, checkAuth } = useAuthStore();
+    
 
     if (!checkAuth && !authUser) {
         return <Navigate to="/login" state={{ from: location }} replace />;
