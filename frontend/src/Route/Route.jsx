@@ -10,7 +10,7 @@ import PrivateRoute from "./PrivateRoute.jsx";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: RootLayout,
+        element: <RootLayout/>,
         children: [
             { index: true, element: <Home /> },
             { path: "/signup", element: <SignUp /> },
@@ -34,3 +34,12 @@ export const router = createBrowserRouter([
         ],
     },
 ]);
+
+
+
+
+
+
+
+
+

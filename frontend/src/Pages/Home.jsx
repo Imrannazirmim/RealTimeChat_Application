@@ -1,9 +1,9 @@
-import React from 'react'
-
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+    return (
+        <div className="flex items-center gap-3">
+            <h2>Home page</h2>
+        </div>
+    );
+};
 
-export default Home
+export default Home;
