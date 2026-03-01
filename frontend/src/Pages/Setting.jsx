@@ -1,7 +1,7 @@
 import React from "react";
 
 const Setting = () => {
-    
+
     return (
         <div>
             <h2>this is settings</h2>
@@ -13,3 +13,5 @@ const Setting = () => {
 };
 
 export default Setting;
+
+

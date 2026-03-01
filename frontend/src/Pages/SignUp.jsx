@@ -1,15 +1,13 @@
-import {useState} from "react";
+import { useState } from "react";
 import loginImg from "../assets/login.webp";
-import {Eye, EyeOff, Loader2} from "lucide-react";
-import {Link} from "react-router";
-import {useAuthStore} from "../store/useAuthStore";
-import toast, {Toaster} from "react-hot-toast";
+import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { Link } from "react-router";
+import { useAuthStore } from "../store/useAuthStore";
+import toast, { Toaster } from "react-hot-toast";
 
 const SignUp = () => {
-    const {signUp, isSignUp} = useAuthStore();
-
+    const { signUp, isSignUp } = useAuthStore();
     const [showPassword, setShowPassword] = useState(false);
-
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -59,7 +57,7 @@ const SignUp = () => {
 
     return (
         <>
-            <Toaster/>
+            <Toaster />
 
             <main className="container mx-auto flex gap-10 mt-20 border border-gray-700 rounded-2xl h-[50vh]">
                 {/* Image Section */}
@@ -139,9 +137,9 @@ const SignUp = () => {
                                 className="absolute right-3 top-10 cursor-pointer text-gray-500"
                             >
                                 {showPassword ? (
-                                    <EyeOff size={20}/>
+                                    <EyeOff size={20} />
                                 ) : (
-                                    <Eye size={20}/>
+                                    <Eye size={20} />
                                 )}
                             </div>
                         </div>
@@ -155,7 +153,7 @@ const SignUp = () => {
                             >
                                 {isSignUp ? (
                                     <>
-                                        <Loader2 className="size-5 animate-spin"/>
+                                        <Loader2 className="size-5 animate-spin" />
                                         Loading...
                                     </>
                                 ) : (
